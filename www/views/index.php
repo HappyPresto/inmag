@@ -1,7 +1,8 @@
+<?php foreach ($items as $item): ?>
 <?php
-/**
- * Created by PhpStorm.
- * User: Koie
- * Date: 22.10.2015
- * Time: 20:16
- */ 
+    echo '</br>';
+    echo '</br>';   ?>
+
+<h1><?php echo $item['title']; ?></h1>
+<div><?php echo $item['text']; ?></div>
+<?php endforeach; ?>

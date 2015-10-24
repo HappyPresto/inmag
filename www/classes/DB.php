@@ -21,15 +21,12 @@ class DB
     public function query($sql)
     {
         $res=mysql_query($sql);
-        var_dump($res);
-        /*if (false === $res) {
+        if (false === $res) {
             return false;
-        }*/
+        }
         $ret = [];
-        echo $sql;
-        while (false != mysql_fetch_array($res)) {
-            $ret[] = $res;
-            var_dump($ret);
+        while (false != ($row = mysql_fetch_array($res))) {
+            $ret[] = $row;
         }
         return $ret;
     }
