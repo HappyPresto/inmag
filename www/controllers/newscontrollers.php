@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../models/models.php';
+require_once __DIR__ . '/../models/models.php';
 
 class NewsController
 {
