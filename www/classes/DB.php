@@ -7,17 +7,6 @@ class DB
         mysql_connect('localhost', 'root', '');
         mysql_select_db('news');
     }
-
-    public function queryAll()
-    {
-
-    }
-
-    public function queryOne()
-    {
-
-    }
-
     public function query($sql)
     {
         $res=mysql_query($sql);
@@ -30,4 +19,15 @@ class DB
         }
         return $ret;
     }
+    public function queryAll()
+    {
+
+    }
+
+    public function queryOne($id)
+    {
+        return $this->query($id);
+    }
+
+
 } 

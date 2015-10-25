@@ -12,4 +12,9 @@ class News
         $db = new DB;
         return $db->query('SELECT * FROM tables');
     }
+    public static function getOne($id)
+    {
+        $db = new DB();
+        return $db->queryOne('SELECT * FROM tables WHERE id=' . $id);
+    }
 }
