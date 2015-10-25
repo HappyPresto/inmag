@@ -1,7 +1,7 @@
 <?php
-    require __DIR__ . '/models/models.php';
+    require __DIR__ . '/controllers/newscontrollers.php';
 
-    $items = News::getAll();
+    $ctrl = new NewsController();
+    $ctrl->actionAll();
 
-    include __DIR__ . '/views/index.php';
 ?>
